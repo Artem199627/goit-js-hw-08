@@ -9,6 +9,7 @@ form.addEventListener("input", throttle(onFormInput, 500));
 
 function onFormSubmit(evt) {
     evt.preventDefault();
+    console.log(localStorage.getItem(STORAGE_KEY));
     localStorage.removeItem(STORAGE_KEY);
     form.reset();
 };
